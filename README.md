@@ -9,14 +9,15 @@ A Node.js package scaffold for an AI agent using the OpenAI Chat API.
    npm install
    ```
 
-2. Set your OpenAI API key:
+2. Set your OpenAI API key. Copy `.env.example` to `.env`:
    ```bash
-   export OPENAI_API_KEY="your_api_key"
+   cp .env.example .env
    ```
-   or create a `.env` file with:
+   Then edit `.env` and add your actual API key:
    ```text
-   OPENAI_API_KEY=your_api_key
+   OPENAI_API_KEY=your_actual_api_key
    ```
+
 
 ## Usage
 
