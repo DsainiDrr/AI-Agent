@@ -1,10 +1,11 @@
 import { OpenAIClient } from "./client.js";
+import { OllamaClient } from "./ollama.js";
 import { ConversationMemory } from "./memory.js";
 
 export class AIAgent {
-  constructor(systemPrompt = "You are a helpful conversational AI assistant.") {
+  constructor(systemPrompt = "You are a helpful conversational AI assistant.", client = null) {
     this.memory = new ConversationMemory();
-    this.client = new OpenAIClient();
+    this.client = client || new OpenAIClient();
     this.systemPrompt = systemPrompt;
   }
 
