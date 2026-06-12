@@ -1,0 +1,15 @@
+{
+  "name": "ai-agent",
+  "version": "0.1.0",
+  "description": "A lightweight Node.js AI agent scaffold using the OpenAI Chat API.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/cli.js",
+    "test": "node --test tests/agent.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^1.0.0",
+    "openai": "^4.0.0"
+  }
+}
