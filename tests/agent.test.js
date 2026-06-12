@@ -1,3 +1,5 @@
+import { test } from "node:test";
+import assert from "node:assert";
 import { AIAgent } from "../src/agent.js";
 
 class DummyClient {
@@ -16,8 +18,8 @@ test("agent asks and stores history", async () => {
 
   const response = await agent.ask("Hello");
 
-  expect(response).toBe("dummy response");
-  expect(agent.memory.getHistory()).toEqual([
+  assert.strictEqual(response, "dummy response");
+  assert.deepStrictEqual(agent.memory.getHistory(), [
     { role: "user", content: "Hello" },
     { role: "assistant", content: "dummy response" },
   ]);
